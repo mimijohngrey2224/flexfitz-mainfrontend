@@ -1,0 +1,290 @@
+{
+    "men": [
+        
+            {
+                "id": 1,
+                "name": "Men Short 1",
+                "img": "/men2-removebg-preview.png",
+                "price": 260,
+                "men": true
+              }, 
+              {
+                "id": 2,
+                "name": "Men Short 2",
+                "img":  "/men5-removebg-preview.png",
+                "price": 260,
+                "men": true
+              },
+              {
+               "id": 3,
+                "name": "Men Short 3",
+               "img": "/menS-removebg-preview.png",
+                "price": 260,
+               "men": true
+              },
+              {
+               "id": 4,
+              "name": "Men Short 4",
+              "img": "/ment-removebg-preview.png",
+                "price": 260,
+               "men": true
+              },
+              {
+                "id": 5,
+                "name": "Men Short 5",
+                "img": "/men2p-removebg-preview.png",
+                "price": 260,
+                "men": true
+              },
+              {
+                "id": 6,
+               "name": "Men Short 6",
+               "img": "/menco.jpg",
+                "price": 260,
+                "men": true
+              },
+              {
+               "id": 7,
+                "name": "Men Short 7",
+                "img": "/mant.jpg",
+                "price": 260,
+                "men": true
+              },
+              {
+                "id": 8,
+                "name": "Men Short 8",
+                "img": "/menTS.jpg",
+                "price": 260,
+                "men": true
+              }
+    ],
+    
+    "menSecond": [
+        {
+           "id": 1,
+            "name": "men casual shorts",
+            "img": "/menmix.jpg",
+            "price": 500,
+            "menSecond": true
+          },
+          {
+           "id": 2,
+            "name": "breathable compression shirts",
+            "img": "/mentopb.jpg",
+           "price": 500,
+            "menSecond": true
+          },
+          {
+            "id": 3,
+            "name": "men leggins",
+            "img": "/mentight.jpg",
+            "price": 500,
+            "menSecond": true
+          },
+          {
+            "id": 4,
+            "name": "men gym casuals",
+            "img": "/menlong.jpg",
+            "price": 500,
+            "menSecond": true
+          },
+          {
+            "id": 5,
+            "name": "men 2 in a casual short",
+            "img": "/mensht.jpg",
+            "price": 500,
+            "menSecond": true
+          },
+          {
+            "id": 6,
+            "name": "knee sleeve",
+           "img": "/rogue2-removebg-preview.png",
+            "price": 500,
+            "menSecond": true
+          },
+          {
+            "id": 7,
+           "name": "high neck compression shirt",
+            "img": "/mentop-removebg-preview.png",
+            "price": 500,
+            "menSecond": true
+          },
+          {
+            "id": 8,
+            "name": "men summer joggers",
+            "img": "/men2pb.jpg",
+            "price": 500,
+            "menSecond": true
+          },
+          {
+            "id": 9,
+            "name": "men casual joggers",
+            "img": "/men3-removebg-preview.png",
+            "price": 500,
+            "menSecond": true
+          }  
+        
+    ],
+    "WomenData": [
+        {
+            "id": 1,
+            "name": "yogger22",
+            "img": "/yogger22.jpg",
+            "price": 500, 
+            "WomenData": true
+          },
+          {
+            "id": 2,
+            "name": "twopiece",
+            "img": "/ladyjp-removebg-preview.png",
+            "price": 500,
+            "WomenData": true
+          },
+          {
+            "id": 3,
+            "name": "ladyjp",
+            "img": "/jogger1.jpg",
+            "price": 500,
+            "WomenData": true 
+          },
+          {
+            "id": 4,
+            "name": "jogger",
+            "img": "/lady2-removebg-preview.png",
+            "price": 500,
+            "WomenData": true 
+          },
+          {
+            "id": 5,
+            "name": "lady",
+            "img": "/twopiecered.jpg",
+            "price": 500,
+            "WomenData": true
+          },
+          {
+            "id": 6,
+            "name": "twopiece",
+            "img": "/ladyst.jpg",
+            "price": 500,
+           "WomenData": true 
+          },
+          {
+            "id": 7,
+           "name": "laddy",
+            "img": "/ladyleg.jpg",
+            "price": 500,
+           "WomenData": true
+          },
+          {
+           "id": 8,
+           "name": "lg",
+            "img": "/ladylegg.jpg",
+           "price": 500,
+            "WomenData": true
+          },
+          {
+            "id": 9,
+            "name": "ladyleg",
+            "img": "/jumpsuit.jpg",
+           "price": 500,
+            "WomenData": true 
+          },   
+      
+          {
+            "id": 10,
+            "name": "jumpsuit",
+            "img": "/twopiece.jpg",
+            "price": 500,
+            "WomenData": true
+          },
+          {
+            "id": 11,
+           "name": "lady1",
+            "img": "/twogirls-removebg-preview.png",
+            "price": 500,
+            "WomenData": true
+          },
+          {
+           "id": 12,
+            "name": "twogirls",
+            "img": "/lady1-removebg-preview.png",
+            "price": 500,
+          "WomenData": true 
+          }
+
+    ],
+
+    "shoes": [
+        {
+            "id": 1,
+            "name": "shoe",
+              "video": "videos/sneaker-x.mp4",
+            "price": 500,
+            "shoes": true
+          },
+          {
+            "id": 2,
+            "name": "type",
+            "img": "/sneaker1w.jpg",
+            "price": 500,
+            "shoes": true
+          },
+          {
+            "id": 3,
+            "name": "shoe",
+            "img": "/sneaker2-removebg-preview.png",
+            "price": 500,
+            "shoes": true 
+          },
+          {
+            "id": 4,
+            "name": "shoe",
+            "img": "/sneaker2m.jpg",
+           "price": 500,
+            "shoes": true
+          },
+          {
+            "id": 5,
+            "name": "shoe",
+            "img": "/sneaker44.jpg",
+            "price": 500,
+           "shoes": true 
+          },
+          {
+           "id": 6,
+            "name": "shoe",
+           "img": "/sneakerNN.jpg",
+            "price": 500,
+            "shoes": true
+          },
+          {
+            "id": 7,
+           "name": "shoe",
+            "img": "/sneaker1L.jpg",
+            "price": 500,
+            "shoes": true 
+          },
+          {
+            "id": 8,
+            "name": "shoe",
+            "img": "/sneaker1a.jpg",
+            "price": 500,
+            "shoes": true 
+          },
+          {
+            "id": 9,
+           "name": "shoe",
+            "img": "/sneakerB.jpg",
+            "price": 500,
+            "shoes": true
+          },
+          {
+            "id": 10,
+            "name": "shoe",
+            "img": "/sneaker4b-removebg-preview.png",
+            "price": 500,
+            "shoes": true 
+          }
+    ]
+    
+}
