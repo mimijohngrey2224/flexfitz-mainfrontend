@@ -22,7 +22,7 @@ const Thanks = () => {
         const token = localStorage.getItem("auth-token");
 
         const res = await fetch(
-          `http://localhost:3000/api/payment/verify/${transactionId}`,
+          `https://flexfitz-api.onrender.com/api/payment/verify/${transactionId}`,
           {
             method: "GET",
             headers: {

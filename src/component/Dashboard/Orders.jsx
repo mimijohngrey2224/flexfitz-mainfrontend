@@ -8,7 +8,7 @@ useEffect(() => {
   const token = localStorage.getItem("auth-token");
 
   axios
-    .get("http://localhost:3000/api/orders/my-orders", {
+    .get("https://flexfitz-api.onrender.com/api/orders/my-orders", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

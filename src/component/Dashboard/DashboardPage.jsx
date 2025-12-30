@@ -28,7 +28,7 @@ const fetchWishlist = async () => {
     const token = localStorage.getItem("auth-token");
     if (!token) return;
 
-    const res = await fetch("http://localhost:3000/api/wishlist", {
+    const res = await fetch("https://flexfitz-api.onrender.com/api/wishlist", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -64,7 +64,7 @@ useEffect(() => {
         const token = localStorage.getItem("auth-token");
         if (!token) return;
 
-        const res = await axios.get("http://localhost:3000/api/orders/my-orders", {
+        const res = await axios.get("https://flexfitz-api.onrender.com/api/orders/my-orders", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -97,7 +97,7 @@ useEffect(() => {
       formData.append("img", selectedFile);
 
       const res = await axios.post(
-        `http://localhost:3000/api/users/upload-avatar/${user._id}`,
+        `https://flexfitz-api.onrender.com/api/users/upload-avatar/${user._id}`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -181,7 +181,7 @@ useEffect(() => {
                   src={
                     user.img?.startsWith("http")
                     ? user.img
-                    : `http://localhost:3000/${user.img}`
+                    : `https://flexfitz-api.onrender.com/${user.img}`
                   }
 
                   alt="User Avatar"
@@ -316,7 +316,7 @@ useEffect(() => {
                           item.image
                             ? item.image.startsWith("http")
                               ? item.image
-                              : `http://localhost:3000/${item.image}`
+                              : `https://flexfitz-api.onrender.com/${item.image}`
                             : "/ladyst.jpg"
                         }
                         alt={item.name}
@@ -375,7 +375,7 @@ useEffect(() => {
                 <img
                   src={
                     item.image
-                      ? `http://localhost:3000/${item.image}`
+                      ? `https://flexfitz-api.onrender.com/${item.image}`
                       : "/ladyst.jpg"
                   }
                   alt={item.name}
@@ -420,7 +420,7 @@ useEffect(() => {
                       const token = localStorage.getItem("auth-token");
 
                       await fetch(
-                        `http://localhost:3000/api/wishlist/${item.productId}`,
+                        `https://flexfitz-api.onrender.com/api/wishlist/${item.productId}`,
                         {
                           method: "DELETE",
                           headers: {

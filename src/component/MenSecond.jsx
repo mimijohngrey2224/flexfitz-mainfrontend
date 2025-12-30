@@ -23,7 +23,7 @@ function MenSecond() {
 
   const handleSave = async (id, updatedFields) => {
     try {
-      const response = await axios.put(`http://localhost:3000/api/product/${id}`, updatedFields);
+      const response = await axios.put(`https://flexfitz-api.onrender.com/api/product/${id}`, updatedFields);
       console.log("Update successful:", response.data);
       alert("Product updated successfully");
     } catch (err) {
@@ -40,7 +40,7 @@ function MenSecond() {
       return;
     }
 
-    const res = await fetch("http://localhost:3000/api/wishlist", {
+    const res = await fetch("https://flexfitz-api.onrender.com/api/wishlist", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -89,7 +89,7 @@ function MenSecond() {
             <div className="text-center">
               <Link to={`/detail/men/${item._id}`}>
                 <img
-                  src={`http://localhost:3000/${item.img}`} 
+                  src={`https://flexfitz-api.onrender.com/${item.img}`} 
                   alt={item.name}
                   className="w-full h-54 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300"
                 />

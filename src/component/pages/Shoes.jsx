@@ -21,7 +21,7 @@ function Shoes() {
 
   const handleSave = async (id, updatedFields) => {
     try {
-      const response = await axios.put(`http://localhost:3000/api/product/${id}`, updatedFields);
+      const response = await axios.put(`https://flexfitz-api.onrender.com/api/product/${id}`, updatedFields);
       console.log("Update successful:", response.data);
       alert("Product updated successfully");
     } catch (err) {
@@ -44,7 +44,7 @@ function Shoes() {
       return;
     }
 
-    const res = await fetch("http://localhost:3000/api/wishlist", {
+    const res = await fetch("https://flexfitz-api.onrender.com/api/wishlist", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -92,7 +92,7 @@ function Shoes() {
             <Link to={`/detail/shoes/${item._id}`}>
               <div className="w-full aspect-video bg-black">
                 <video
-                  src={`http://localhost:3000/${item.video}`}
+                  src={`https://flexfitz-api.onrender.com/${item.video}`}
                   className="w-full h-full object-contain"
                   autoPlay
                   loop
@@ -144,7 +144,7 @@ function Shoes() {
           >
             <Link to={`/detail/shoes/${item._id}`}>
               <img
-                src={`http://localhost:3000/${item.img}`}
+                src={`https://flexfitz-api.onrender.com/${item.img}`}
                 alt={item.name}
                 className="w-full h-73 object-cover"
               />

@@ -52,7 +52,7 @@
         {/* Left: Image */}
         <div className="relative group">
           <img
-            src={"http://localhost:3000/" + item?.img}
+            src={"https://flexfitz-api.onrender.com/" + item?.img}
             // src={`${url}/uploads/${item.img}`}
             alt={item.name}
             className="rounded-lg w-full object-cover shadow-lg transform group-hover:scale-105 transition-transform duration-300"

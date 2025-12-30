@@ -45,7 +45,7 @@ function Checkout() {
                 <td className="py-4 px-6 font-semibold">{item.name}</td>
                 <td className="py-4 px-6">
                   <img
-                    src={`http://localhost:3000/${item.img}`}
+                    src={`https://flexfitz-api.onrender.com/${item.img}`}
                     alt={item.name}
                     className="h-14 w-14 object-cover rounded-lg border border-gray-200 shadow-sm"
                   />
@@ -71,7 +71,7 @@ function Checkout() {
             <div key={item._id} className="bg-white rounded-xl shadow-lg p-4 border border-gray-200">
               <div className="flex items-center gap-4">
                 <img
-                  src={`http://localhost:3000/${item.img}`}
+                  src={`https://flexfitz-api.onrender.com/${item.img}`}
                   alt={item.name}
                   className="h-16 w-16 object-cover rounded-md border"
                 />

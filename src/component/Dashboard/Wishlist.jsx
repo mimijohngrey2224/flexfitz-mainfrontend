@@ -7,7 +7,7 @@ function Wishlist({ user }) {
 
   useEffect(() => {
     if (user?._id) {
-      axios.get(`http://localhost:3000/api/users/${user._id}/wishlist`)
+      axios.get(`https://flexfitz-api.onrender.com/api/users/${user._id}/wishlist`)
         .then(res => setWishlist(res.data.products || []))
         .catch(() => setWishlist([]));
     }
@@ -15,7 +15,7 @@ function Wishlist({ user }) {
 
   const removeFromWishlist = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/users/${user._id}/wishlist/${id}`);
+      await axios.delete(`https://flexfitz-api.onrender.com/api/users/${user._id}/wishlist/${id}`);
       setWishlist(prev => prev.filter(item => item._id !== id));
     } catch (err) {
       console.error("Failed to remove from wishlist:", err);

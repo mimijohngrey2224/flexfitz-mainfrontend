@@ -59,34 +59,34 @@ const refreshCart = async () => {
     const filteredShoes = shoesData.filter((item) => item.shoes === true);
 
     const fetchProduct = async () => {
-        const response = await fetch("http://localhost:3000/api/product")
+        const response = await fetch("https://flexfitz-api.onrender.com/api/product")
         const data = await response.json();
         setMenProduct(data);
     }
 
     const fetchmenData = async()=>{
-        const response = await fetch("http://localhost:3000/api/product/men")
+        const response = await fetch("https://flexfitz-api.onrender.com/api/product/men")
         const data = await response.json();
         console.log("Fetched men data:", data);
         setMenProduct(data);
     };
 
     const fetchmenSecondData = async()=>{
-        const response = await fetch("http://localhost:3000/api/product/menSecond")
+        const response = await fetch("https://flexfitz-api.onrender.com/api/product/menSecond")
         const data = await response.json();
         console.log("Fetched menSecond data:", data);
         setMenSlide(data);
     };
 
     const fetchwomenRaw = async()=>{
-        const response = await fetch("http://localhost:3000/api/product/WomenData")
+        const response = await fetch("https://flexfitz-api.onrender.com/api/product/WomenData")
         const data = await response.json();
         console.log("Fetched WomenData data:", data);
         setWomenSlide(data);
     };
 
     const fetchshoesRaw = async()=>{
-        const response = await fetch("http://localhost:3000/api/product/shoes")
+        const response = await fetch("https://flexfitz-api.onrender.com/api/product/shoes")
         const data = await response.json();
         console.log("Fetched shoes data:", data);
         setShoesData(data);
@@ -97,7 +97,7 @@ const fetchCart = async () => {
   try {
     const token = user?.token || localStorage.getItem("auth-token");
 
-    const response = await fetch("http://localhost:3000/api/cart", {
+    const response = await fetch("https://flexfitz-api.onrender.com/api/cart", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -123,7 +123,7 @@ const addToCart = async (product) => {
     console.log(JSON.parse(localStorage.getItem("user")));
 
 
-    const response = await fetch("http://localhost:3000/api/cart/add", {
+    const response = await fetch("https://flexfitz-api.onrender.com/api/cart/add", {
       method: "POST",
         credentials: "include",   // <-- THIS WAS MISSING!!!
       headers: {
@@ -168,7 +168,7 @@ const updateQuantity = async (productId, newQuantity, size, color) => {
 
     const token = user?.token || localStorage.getItem("auth-token");
 
-    const response = await fetch("http://localhost:3000/api/cart/update-quantity", {
+    const response = await fetch("https://flexfitz-api.onrender.com/api/cart/update-quantity", {
       method: "POST",
         credentials: "include",   // <-- THIS WAS MISSING!!!
       headers: {
@@ -217,7 +217,7 @@ const updateQuantity = async (productId, newQuantity, size, color) => {
 
 const deleteProduct = async (id) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/product/${id}`, {
+    const res = await fetch(`https://flexfitz-api.onrender.com/api/product/${id}`, {
       method: "DELETE",
         credentials: "include",   // <-- THIS WAS MISSING!!!
       headers: {
@@ -240,7 +240,7 @@ const deleteProduct = async (id) => {
 
 const removeItem = async (productId, size, color) => {
   try {
-    const res = await fetch("http://localhost:3000/api/cart/delete-item", {
+    const res = await fetch("https://flexfitz-api.onrender.com/api/cart/delete-item", {
       method: "POST",
       credentials: "include",   // <-- THIS WAS MISSING!!!
       headers: {
@@ -321,7 +321,7 @@ const handleCheckout = async () => {
   try {
     const token = localStorage.getItem("auth-token");
 
-    const res = await fetch("http://localhost:3000/api/payment/initiate", {
+    const res = await fetch("https://flexfitz-api.onrender.com/api/payment/initiate", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,

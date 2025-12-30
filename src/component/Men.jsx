@@ -36,7 +36,7 @@ function Men() {
           <img
             key={product.id || index} // ✅ unique key fallback
             // src={"http://localhost:3000/" + product.img} // ✅ corrected URL
-            src={`http://localhost:3000/${product.img}`}
+            src={`https://flexfitz-api.onrender.com/${product.img}`}
             alt={product.name}
             className="w-[200px] h-[200px] object-cover rounded-lg shadow-xl transition-all duration-300 transform hover:scale-110 hover:shadow-2xl"
           />
@@ -48,7 +48,7 @@ function Men() {
           {/* Image Carousel */}
           <div className="relative mb-[30px] lg:mb-0">
             <img
-              src={"http://localhost:3000/" + images[safeIndex]}
+              src={"https://flexfitz-api.onrender.com/" + images[safeIndex]}
               alt="Product Image"
               className="w-[480px] h-[480px] object-cover rounded-lg shadow-xl transition-all duration-300 ease-in-out"
             />

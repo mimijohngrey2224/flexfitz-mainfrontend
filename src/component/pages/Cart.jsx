@@ -44,7 +44,7 @@ function Cart() {
                 <td className="py-4 px-6 font-semibold">{item.name}</td>
                 <td className="py-4 px-6">
                   <img
-                    src={`http://localhost:3000/${item.img}`}
+                    src={`https://flexfitz-api.onrender.com/${item.img}`}
                     alt={item.name}
                     className="h-14 w-14 object-cover rounded-lg border border-gray-200 shadow-sm"
                   />
@@ -89,7 +89,7 @@ function Cart() {
               <div className="flex gap-4 items-center">
                 <img
                   // src={item.img}
-                  src={`http://localhost:3000/${item.img}`}
+                  src={`https://flexfitz-api.onrender.com/${item.img}`}
                   alt={item.name}
                   className="h-16 w-16 object-cover rounded-lg border border-gray-200"
                 />

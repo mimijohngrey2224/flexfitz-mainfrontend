@@ -12,7 +12,7 @@ const OrderDetails = () => {
         const token = localStorage.getItem("auth-token");
 
         const res = await fetch(
-          `http://localhost:3000/api/orders/${id}`,
+          `https://flexfitz-api.onrender.com/api/orders/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -102,7 +102,7 @@ const OrderDetails = () => {
           const imageSrc = item.image
             ? item.image.startsWith("http")
               ? item.image
-              : `http://localhost:3000/${item.image}`
+              : `https://flexfitz-api.onrender.com/${item.image}`
             : "/ladyst.jpg";
 
           return (
