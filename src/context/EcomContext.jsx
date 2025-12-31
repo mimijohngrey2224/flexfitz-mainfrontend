@@ -287,18 +287,53 @@ const registerUser = (userData) => {
 
 
 //new 6th december
-const loginUser = (userData) => {
-  // Save user in state
-  setUser(userData);
+// const loginUser = (userData) => {
+//   // Save user in state
+//   setUser(userData);
 
-  // Save to localStorage
-  localStorage.setItem("user", JSON.stringify(userData));
-  if (userData.token) {
-    localStorage.setItem("auth-token", userData.token);
+//   // Save to localStorage
+//   localStorage.setItem("user", JSON.stringify(userData));
+//   if (userData.token) {
+//     localStorage.setItem("auth-token", userData.token);
+//   }
+
+//   toast.success("Login successful!");
+// };
+
+const loginUser = async (e) => {
+  e.preventDefault();
+
+  try {
+    const res = await fetch(
+      "https://flexfitz-api.onrender.com/login",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password })
+      }
+    );
+
+    const data = await res.json();
+    console.log("Login response:", data);
+
+    if (!res.ok) {
+      ShowAndHide("error", data.message || "Invalid Email/Password");
+      return;
+    }
+
+    loginUser({
+      ...data.user,
+      token: data.token
+    });
+
+    redirect("/dashboard");
+    ShowAndHide("success", "Login successful!");
+  } catch (err) {
+    console.error(err);
+    ShowAndHide("error", "Server error");
   }
-
-  toast.success("Login successful!");
 };
+
 
 //new 6 december
 const logoutUser = () => {
