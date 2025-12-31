@@ -95,6 +95,17 @@ function Footer() {
                 <FaWhatsapp size={30} />
               </a>
 
+              <a
+                href="https://mail.google.com/mail/?view=cm&to=leemahsflexfitz@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Email"
+                className="transform transition duration-300 hover:scale-110 hover:text-yellow-400"
+              >
+                <FaEnvelope size={30} />
+              </a>
+
+
               {/* Email */}
               {/* <a
                 href="mailto:support@leemahsflexfitz@gmail.com"
@@ -104,13 +115,13 @@ function Footer() {
                 <FaEnvelope size={30} />
               </a> */}
 
-              <a
+              {/* <a
                 href="mailto:leemahsflexfitz@gmail.com"
                 aria-label="Email"
                 className="transform transition duration-300 hover:scale-110 hover:text-yellow-400"
               >
                 <FaEnvelope size={30} />
-              </a>
+              </a> */}
             </div>
           </div>
 
