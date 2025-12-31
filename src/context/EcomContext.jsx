@@ -300,6 +300,41 @@ const registerUser = (userData) => {
 //   toast.success("Login successful!");
 // };
 
+// const loginUser = async (e) => {
+//   e.preventDefault();
+
+//   try {
+//     const res = await fetch(
+//       "https://flexfitz-api.onrender.com/login",
+//       {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify({ email, password })
+//       }
+//     );
+
+//     const data = await res.json();
+//     console.log("Login response:", data);
+
+//     if (!res.ok) {
+//       ShowAndHide("error", data.message || "Invalid Email/Password");
+//       return;
+//     }
+
+//     loginUser({
+//       ...data.user,
+//       token: data.token
+//     });
+
+//     redirect("/dashboard");
+//     ShowAndHide("success", "Login successful!");
+//   } catch (err) {
+//     console.error(err);
+//     ShowAndHide("error", "Server error");
+//   }
+// };
+
+//new
 const loginUser = async (e) => {
   e.preventDefault();
 
@@ -309,30 +344,33 @@ const loginUser = async (e) => {
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password })
+        body: JSON.stringify({ email, password }),
       }
     );
+
+    if (!res.ok) {
+      const text = await res.text();
+      console.error("Login error response:", text);
+      ShowAndHide("error", "Invalid login credentials");
+      return;
+    }
 
     const data = await res.json();
     console.log("Login response:", data);
 
-    if (!res.ok) {
-      ShowAndHide("error", data.message || "Invalid Email/Password");
-      return;
-    }
-
     loginUser({
       ...data.user,
-      token: data.token
+      token: data.token,
     });
 
     redirect("/dashboard");
     ShowAndHide("success", "Login successful!");
   } catch (err) {
-    console.error(err);
+    console.error("Login error:", err);
     ShowAndHide("error", "Server error");
   }
 };
+
 
 
 //new 6 december
