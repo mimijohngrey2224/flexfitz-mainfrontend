@@ -96,8 +96,16 @@ function Footer() {
               </a>
 
               {/* Email */}
-              <a
+              {/* <a
                 href="mailto:support@leemahsflexfitz@gmail.com"
+                aria-label="Email"
+                className="transform transition duration-300 hover:scale-110 hover:text-yellow-400"
+              >
+                <FaEnvelope size={30} />
+              </a> */}
+
+              <a
+                href="mailto:leemahsflexfitz@gmail.com"
                 aria-label="Email"
                 className="transform transition duration-300 hover:scale-110 hover:text-yellow-400"
               >
