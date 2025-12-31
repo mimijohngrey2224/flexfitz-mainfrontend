@@ -335,40 +335,51 @@ const registerUser = (userData) => {
 // };
 
 //new
-const loginUser = async (e) => {
-  e.preventDefault();
+// const loginUser = async (e) => {
+//   e.preventDefault();
 
-  try {
-    const res = await fetch(
-      "https://flexfitz-api.onrender.com/login",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      }
-    );
+//   try {
+//     const res = await fetch(
+//       "https://flexfitz-api.onrender.com/login",
+//       {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify({ email, password }),
+//       }
+//     );
 
-    if (!res.ok) {
-      const text = await res.text();
-      console.error("Login error response:", text);
-      ShowAndHide("error", "Invalid login credentials");
-      return;
-    }
+//     if (!res.ok) {
+//       const text = await res.text();
+//       console.error("Login error response:", text);
+//       ShowAndHide("error", "Invalid login credentials");
+//       return;
+//     }
 
-    const data = await res.json();
-    console.log("Login response:", data);
+//     const data = await res.json();
+//     console.log("Login response:", data);
 
-    loginUser({
-      ...data.user,
-      token: data.token,
-    });
+//     loginUser({
+//       ...data.user,
+//       token: data.token,
+//     });
 
-    redirect("/dashboard");
-    ShowAndHide("success", "Login successful!");
-  } catch (err) {
-    console.error("Login error:", err);
-    ShowAndHide("error", "Server error");
+//     redirect("/dashboard");
+//     ShowAndHide("success", "Login successful!");
+//   } catch (err) {
+//     console.error("Login error:", err);
+//     ShowAndHide("error", "Server error");
+//   }
+// };
+
+
+// Only store user info, no fetch
+const loginUser = (userData) => {
+  setUser(userData);
+  localStorage.setItem("user", JSON.stringify(userData));
+  if (userData.token) {
+    localStorage.setItem("auth-token", userData.token);
   }
+  toast.success("Login successful!");
 };
 
 

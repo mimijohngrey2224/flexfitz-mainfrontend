@@ -30,37 +30,72 @@ console.log("EcomContext value:", context);
 
   const { loginUser } = useContext(EcomContext);
 
+// const loginHandler = async (e) => {
+//   e.preventDefault();
+
+//   try {
+//     const res = await fetch("https://flexfitz-api.onrender.com", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify({ email, password })
+//     });
+
+//     const data = await res.json();
+//     console.log("Login response:", data);
+
+//     if (!data.success) {
+//       ShowAndHide("error", "Invalid Email/Password");
+//       return;
+//     }
+
+//     // 🚀 USE THE EcomContext loginUser FUNCTION
+//     loginUser({
+//       ...data.user,
+//       token: data.token
+//     });
+
+//     redirect("/dashboard");
+//     ShowAndHide("success", "Login successful!");
+//   } catch (err) {
+//     console.error(err);
+//     ShowAndHide("error", "Server error");
+//   }
+// };
+
+
 const loginHandler = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch("https://flexfitz-api.onrender.com", {
+    const res = await fetch("https://flexfitz-api.onrender.com/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password })
+      body: JSON.stringify({ email, password }),
     });
 
-    const data = await res.json();
-    console.log("Login response:", data);
-
-    if (!data.success) {
-      ShowAndHide("error", "Invalid Email/Password");
+    if (!res.ok) {
+      const text = await res.text();
+      console.error("Login error response:", text);
+      ShowAndHide("error", "Invalid login credentials");
       return;
     }
 
-    // 🚀 USE THE EcomContext loginUser FUNCTION
+    const data = await res.json();
+
+    // ✅ Use the context function to store the user
     loginUser({
       ...data.user,
-      token: data.token
+      token: data.token,
     });
 
     redirect("/dashboard");
     ShowAndHide("success", "Login successful!");
   } catch (err) {
-    console.error(err);
+    console.error("Login error:", err);
     ShowAndHide("error", "Server error");
   }
 };
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
