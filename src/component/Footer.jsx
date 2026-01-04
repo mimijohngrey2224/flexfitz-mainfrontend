@@ -129,7 +129,7 @@ function Footer() {
         
         {/* Bottom Section (Optional) */}
         <div className="mt-12 text-center text-sm">
-          <p>&copy; 2025 FLEXFITZ. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} FLEXFITZ. All rights reserved.</p>
         </div>
       </footer>
     </div>
